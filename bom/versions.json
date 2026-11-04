@@ -1,5 +1,5 @@
 {
-  "description": "Canonical tomato-bazel distribution dependency versions \u2014 the BOM. The `rels deps` ratchet audits every repo's MODULE.bazel against this and opens coordinated bumps; repos should not float below these. This is a manifest (data), NOT transitive bazel_deps, so consuming rules_tomato doesn't pull the whole constellation.",
+  "description": "Canonical tomato-bazel distribution dependency versions — the BOM. The `rels deps` ratchet audits every repo's MODULE.bazel against this and opens coordinated bumps; repos should not float below these. This is a manifest (data), NOT transitive bazel_deps, so consuming rules_tomato doesn't pull the whole constellation.",
   "modules": {
     "apple_support": "2.2.0",
     "aspect_bazel_lib": "2.22.5",
@@ -14,24 +14,28 @@
     "hermetic_cc_toolchain": "4.1.0",
     "platforms": "1.0.0",
     "protobuf": "33.4",
+    "rules_aip": "0.3.1",
+    "rules_autoconf": "0.1.1",
     "rules_cc": "0.0.17",
-    "rules_cloudformation": "0.8.0",
+    "rules_cloudformation": "0.10.1",
     "rules_gitlab": "0.3.2",
     "rules_go": "0.60.0",
     "rules_helm": "0.1.0",
     "rules_java": "8.6.1",
     "rules_jvm_external": "6.6",
     "rules_k8s": "0.0.3",
+    "rules_lean": "0.7.2",
     "rules_mdbook": "0.3.1",
     "rules_nodejs": "6.7.4",
     "rules_oci": "2.2.6",
     "rules_pkg": "1.0.1",
+    "rules_postgres": "0.13.0",
     "rules_proto": "7.1.0",
     "rules_proto_grpc": "5.8.0",
     "rules_proto_grpc_doc": "5.8.0",
     "rules_proto_grpc_java": "5.8.0",
     "rules_python": "1.7.0",
-    "rules_readme": "0.0.3",
+    "rules_readme": "0.0.4",
     "rules_rust": "0.70.0",
     "rules_rust_prost": "0.70.0",
     "rules_rust_wasm_bindgen": "0.70.0",
@@ -41,14 +45,14 @@
     "toolchains_llvm": "1.7.0"
   },
   "notes": {
-    "aspect_rules_js": "3.1.2 \u2014 17 modules are already here; one is on 2.1.3, which the ratchet will bump. That is a MAJOR move, so verify that repo before merging its bump PR.",
+    "aspect_rules_js": "3.1.2 — 17 modules are already here; one is on 2.1.3, which the ratchet will bump. That is a MAJOR move, so verify that repo before merging its bump PR.",
     "brand": "Bump to 0.3.0 once the @brand//mdbook:theme release lands (0.2.0 is the last published).",
-    "gazelle": "0.51.0 \u2014 two modules here, one on 0.44.0.",
+    "gazelle": "0.51.0 — two modules here, one on 0.44.0.",
     "googleapis": "Pseudo-version (0.0.0-<date>-<sha>). Ordering is by the prerelease segment, so a newer snapshot sorts above; bump deliberately, not by ratchet.",
     "rules_cc": "Pinned at 0.0.17; 0.2.x is a coordinated MAJOR bump (verify per repo first), not auto-ratcheted.",
     "rules_ci": "Renamed from rules_ci_ir; key it here once Agent-A publishes the first registry version.",
-    "rules_nodejs": "6.7.4 \u2014 17 modules here, one on 6.3.0.",
-    "rules_proto_grpc": "The three rules_proto_grpc* modules move together at 5.8.0 \u2014 bumping one alone breaks codegen.",
-    "rules_python": "Held at 1.7.0 \u2014 Agent-A's rules_gitlab 0.3.2 toolchain wants it; a 2.x move is a later coordinated bump (re-verify rules_gitlab first)."
+    "rules_nodejs": "6.7.4 — 17 modules here, one on 6.3.0.",
+    "rules_proto_grpc": "The three rules_proto_grpc* modules move together at 5.8.0 — bumping one alone breaks codegen.",
+    "rules_python": "Held at 1.7.0 — Agent-A's rules_gitlab 0.3.2 toolchain wants it; a 2.x move is a later coordinated bump (re-verify rules_gitlab first)."
   }
 }
